@@ -1,0 +1,10 @@
+<h1>Siddhu List</h1>
+<ul>
+{% for siddhulist in object_list %}
+<li>{{ siddhulist.name }} :
+<a href="{% url "siddhu_update" siddhulist.id %}">Click to Update > {{siddhulist.address }}</a>
+<a href="{% url "siddhu_delete" siddhulist.id %}">Click to delete> </a>
+</li> {% endfor %}
+</ul>
+
+<a href="{% url "siddhu_insert" %}">Click to Create New Data</a>
